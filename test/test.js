@@ -1,4 +1,4 @@
-let ipe = 0,salario = 0,i = 0
+let iper = 0,inss = 0,salario = 0,i = 0
 const tabela = [
     {salinicio:0      ,salfim:5000.0 ,salresid:5000  ,incide:0.11 },
     {salinicio:5000.1 ,salfim:7500   ,salresid:2500  ,incide:0.115},
@@ -8,20 +8,49 @@ const tabela = [
     {salinicio:19000.1,salfim:35000  ,salresid:16000 ,incide:0.135},
     {salinicio:35000  ,salfim:1000000,salresid:965000,incide:0.14 }   
 ]
-
-function executar() {
-    salario = parseFloat(prompt("informe o salario"))
+function displayinss(inss){
+    const exibirinss = document.getElementById('exibir-inss')
+    exibirinss.innerText = inss.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+    document.getElementById('salario').value=''
+}
+function displayiper(iper){
+    const exibiriper = document.getElementById('exibir-iper')
+    exibiriper.innerText = iper.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+    document.getElementById('salario').value=''
+}    
+function lersalario(){
+    salario = document.getElementById('salario').value
+    return salario
+}
+function calculariper() {
+    lersalario()
     while(salario>0){
         if(salario>=(tabela[i].salresid)){
-            ipe += (tabela[i].salresid*tabela[i].incide)
+            iper += (tabela[i].salresid*tabela[i].incide)
             salario -= tabela[i].salresid
         }else{
-            ipe += salario*(tabela[i].incide)          
+            iper += salario*(tabela[i].incide)          
             salario = 0
         }
         i++
-    }
-    alert(ipe)   
+    } 
+    displayiper(iper)
+    iper=0    
 }
-executar()
+function calcularinss(){
+    lersalario()
+    if (salario<=1212.00){
+        inss = (salario*100*0.075)/100
+    }else if(salario>1212.00 && salario<=2427.35){
+        inss = ((salario*100*0.09)/100)-18.18
+    }else if(salario>2427.35 && salario<=3641.03){
+        inss = ((salario*100*0.12)/100)-91.00
+    }else if(salario>3641.03 && salario<=7087.22){
+        inss = ((salario*100*0.14)/100)-91.00
+    }else{
+        inss = 828.38
+    }
+    displayinss(inss)
+}
+
 
