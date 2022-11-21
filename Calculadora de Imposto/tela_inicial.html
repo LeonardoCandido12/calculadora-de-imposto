@@ -2,9 +2,10 @@
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
-        <title>Calculadora de Impostos</title>
-        <link rel="stylesheet" type="text/css" href="tela_inicial.css">
         <meta name="viewport" content="width=device-width, inital-scale=1.0">
+        <title>Calculadora de Impostos</title>
+        <!-- <link rel="stylesheet" type="text/css" href="tela_inicial.css"> -->
+        <script src="../test/index.js" defer></script>
     </head>
     <body>
         <div class="header">
@@ -13,29 +14,30 @@
                 <img id="logo" src="https://i.ibb.co/jv4GwpG/dpe-logo.gif" alt="logo">
             </div>
             <header>
-                Calculadora de Impostos (IPER)
+                Calculadora de Impostos 
                 <p>Defensoria Pública do Estado de Roraima</p>
             </header>
         </div>
         <div class="container">
             <p>Salário</p>
-            <form action="calculadora de impostos" method="post">
-                    <label for="salario"></label>
-                    <input type="text" id="salario" required placeholder="R$ 5.000,00" />
-                 <button class="cargo">Efetivo</button>
+            <label for="salario"></label>
+            <input type="text" id="salario" required placeholder="R$ 5.000,00" ></input>
         </div>
         <div class="cargos">
-            <p class="impostos">IPER</p>
+            <p class="impostos">IPER:</p><p id="exibir-iper"></p>
             <hr>
-            <p class="impostos">IR</p>
+            <p class="impostos">IR:</p>
+            <button onclick="calculariper()">Efetivo</button>
             <hr>
-            <button class="cargo">Comissionado</button>
         </div>
         <div class="cargos1">
-            <p>INSS</p>
+            <p>INSS:</p>
+            <p id="exibir-inss"></p>
             <hr>
-            <p>IR</p>
+            <p>IR:</p>
+            <p></p>
             <hr>
+            <button onclick="calcularinss()"class="cargo">Comissionado</button>
         </div>
     </body>
 </html>
