@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, inital-scale=1.0">
         <title>Calculadora de Impostos</title>
         <link rel="stylesheet" type="text/css" href="tela_inicial.css">
-        <script src="../script/script.js" defer></script>
+        <script src="../test/script.js" defer></script>
     </head>
     <body>
         <div class="header">
@@ -24,14 +24,13 @@
             <input type="text" id="salario" required placeholder="R$ 5.000,00" ></input>
         </div>
         <div class="cargos">
-            <button onclick="calculariper()">Efetivo</button>
-            <p class="impostos">IPER:</p><p id="exibir-iper"></p>
+            <button onclick="onExecutarIPER()">Efetivo</button>
+            <p id="exibir-iper"class="impostos">IPER:</p>
             <hr>
             <p class="impostos">IR:</p>
             <hr>
-            <button onclick="calcularinss()"class="cargo">Comissionado</button>
-            <p class="impostos">INSS:</p>
-            <p id="exibir-inss"></p>
+            <button onclick="onExecutarINSS()"class="cargo">Comissionado</button>
+            <p id="exibir-inss"class="impostos">INSS:</p>
             <hr>
             <p class="impostos">IR:</p>
             <hr>
