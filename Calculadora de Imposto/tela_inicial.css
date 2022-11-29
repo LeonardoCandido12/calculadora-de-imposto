@@ -12,18 +12,15 @@ body{
     position: relative;
     float: left;
 }
-
 .header header{
     position: relative;
     color:#001a33;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 100%;
     text-align: center;
 }
 .header p{
     text-align: left;
     color:#001a33;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 80%;
     margin-right: auto;
     margin-left: auto;
@@ -34,20 +31,17 @@ body{
     min-width: auto;
     margin-right: auto;
     margin-left: auto;
-    padding: 100px;
+    padding: 50px;
 }
 .container p{
     position: relative;
-    right: 15px;
     left:auto ;
     color:#001a33;
     font-size: 100%;
     margin: auto;
 }
 .container label{
-    display: inline-block;
     text-align: right;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: medium;
 }
 .container input{
@@ -56,25 +50,7 @@ body{
     left: 5%;
     border-radius: 2px;
     padding: 10px 5px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: medium;
-}
-.container button{
-    position: absolute;
-    left: 5%;
-    background: #c7154a;
-    border: 1px solid #c7154a;
-    border-radius: 6px;
-    color: #FFFFFF;
-    cursor: pointer;
-    display: inline-block;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 100%;
-    line-height: 16px;
-    max-width: auto;
-    min-height: auto;
-    margin: 70px 10px auto;
-    padding: 15px 25px;  
 }
 .impostos{
     position: relative;
@@ -82,19 +58,15 @@ body{
     left: auto;
     color:#001a33;
     font-size: 100%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 10px 102px;
 }
 .cargos button{
-    position: absolute;
-    left: 5%;
     background: #c7154a;
     border: 1px solid #c7154a;
     border-radius: 6px;
     color: #FFFFFF;
     cursor: pointer;
     display: inline-block;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: medium;
     line-height: 16px;
     margin: 20px 10px;
@@ -103,13 +75,4 @@ body{
 .cargos hr{
     margin-right: 105px;
     margin-left: 50px;
-}
-.cargos1{
-    font-size: 100%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color:#001a33;
-    position: relative;
-    right: 25px;
-    left: auto;
-    padding: 79px;
 }
