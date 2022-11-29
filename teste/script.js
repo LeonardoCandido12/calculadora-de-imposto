@@ -28,7 +28,7 @@ function calcularIPER(salario){
 }
 function displayIPER(iper){
     const exibirIPER = document.getElementById('exibir-iper')
-    exibirIPER.innerText = iper.toLocaleString('pt-br',{
+    exibirIPER.innerText = "IPER: "+iper.toLocaleString('pt-br',{
         style: 'currency', 
         currency: 'BRL'})
     document.getElementById('salario').value=''
@@ -39,7 +39,7 @@ function onExecutarINSS(){
 }
 function displayINSS(inss){
     const exibirINSS = document.getElementById('exibir-inss')
-    exibirINSS.innerText = inss.toLocaleString('pt-br',{
+    exibirINSS.innerText = "INSS: "+inss.toLocaleString('pt-br',{
         style: 'currency', 
         currency: 'BRL'})
     document.getElementById('salario').value=''
