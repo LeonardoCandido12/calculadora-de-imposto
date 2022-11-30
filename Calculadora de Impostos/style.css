@@ -1,0 +1,47 @@
+.container{
+    color:#001a33;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.header{
+    display: grid;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.main{
+    padding: 20px;
+}
+
+#avatar{
+    position: fixed;
+    right: 2%;
+    top: 10px;
+    cursor: pointer;
+}
+
+#logo{
+    position: fixed;
+    left: 2%;
+    cursor: pointer;
+}
+
+input{
+    display: block;
+    border-radius: 2px;
+    padding: 10px 5px;
+    font-size: medium;
+}
+
+button{
+    background: #c7154a;
+    border: 1px solid #c7154a;
+    border-radius: 6px;
+    color: #FFFFFF;
+    cursor: pointer;
+    line-height: 16px;
+    margin: 20px 10px;
+    padding: 15px 25px;
+    font-size: medium;
+}
