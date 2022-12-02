@@ -14,6 +14,10 @@
     padding: 20px;
 }
 
+p{
+    font-size: 1.25rem;
+}
+
 #avatar{
     position: fixed;
     right: 2%;
