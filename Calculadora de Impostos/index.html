@@ -14,21 +14,23 @@
                 <img id="logo" src="https://i.ibb.co/jv4GwpG/dpe-logo.gif" alt="dpe-logo">  
             </div>
             <div class="main">
-                <p>Salario</p>
-                <label for="salario"></label>
-                <input type="text" id="salario" required placeholder="R$ 5.000,00" ></input>
-                <button onclick="calculariper()">Efetivo</button>
-                <p>IPER:</p><p id="exibir-iper"></p>
-                <hr>
-                <p>IR:</p>
-                <hr>
-                <button onclick="calcularinss()"class="cargo">Comissionado</button>
-                <p>INSS:</p>
-                <p id="exibir-inss"></p>
-                <hr>
-                <p>IR:</p>
-                <hr>    
-            </div>     
+                <form>
+                    <p>Salario</p>
+                    <label for="salario"></label>
+                    <input type='currency' id="salario" required placeholder="R$ 5.000,00" ></input>
+                    <button onclick="calculariper()">Efetivo</button>
+                    <p>IPER:</p><p id="exibir-iper"></p>
+                    <hr>
+                    <p>IR:</p>
+                    <hr>
+                    <button onclick="calcularinss()"class="cargo">Comissionado</button>
+                    <p>INSS:</p>
+                    <p id="exibir-inss"></p>
+                    <hr>
+                    <p>IR:</p>
+                    <hr>    
+                    </div>  
+                </form>       
         </div>
     </body>
 </html>
