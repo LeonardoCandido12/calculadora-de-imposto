@@ -51,14 +51,24 @@ function calcularIPER(salario) {
     return IPERs;
 }
 
-function displayIPER(iper) {
-    const exibirIPER = document.getElementById("exibir-iper");
+function displayIPER(IPER, IPERs) {
     exibirIPER.innerText =
         "IPER: " +
-        iper.toLocaleString("pt-br", {
+        IPER.toLocaleString("pt-br", {
             style: "currency",
             currency: "BRL",
         });
+
+    for (let i = 0; i < idsIPER.length; i++) {
+        try {
+            idsIPER[i].innerText = IPERs[i].toLocaleString("pt-br", {
+                style: "currency",
+                currency: "BRL",
+            });
+        } catch (error) {
+            idsIPER[i].innerText = "";
+        }
+    }
 }
 
 function onExecutarINSS() {
