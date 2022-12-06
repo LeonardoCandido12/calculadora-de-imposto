@@ -8,8 +8,8 @@ const tabela = [
     { salinicio: 35000, salfim: 100000000, salresid: 965000000, incide: 0.14 },
 ];
 const iperHTML = document.getElementById("salario-iper");
-
 const inssHTML = document.getElementById("salario-inss");
+const exibirIPER = document.getElementById("exibir-iper");
 
 const idsIPER = getIdsIPER();
 
@@ -26,10 +26,13 @@ function getIdsIPER() {
 
 function onExecutarIPER() {
     const valorIPER = iperHTML.value.replace(",", ".");
-    console.log(valorIPER);
     const IPERs = calcularIPER(valorIPER);
-    const IPER = IPERs.reduce((a, b) => a + b);
-    displayIPER(IPER);
+
+    let IPER = 0;
+    try {
+        IPER = IPERs.reduce((a, b) => a + b);
+    } catch (error) {}
+    displayIPER(IPER, IPERs);
 }
 
 function calcularIPER(salario) {
