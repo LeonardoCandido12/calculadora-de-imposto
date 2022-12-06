@@ -27,24 +27,28 @@ function getIdsIPER() {
 function onExecutarIPER() {
     const valorIPER = iperHTML.value.replace(",", ".");
     console.log(valorIPER);
-    const IPER = calcularIPER(valorIPER);
+    const IPERs = calcularIPER(valorIPER);
+    const IPER = IPERs.reduce((a, b) => a + b);
     displayIPER(IPER);
 }
 
 function calcularIPER(salario) {
-    let iper = 0,
-        i = 0;
+    let IPERs = [];
+    let IPER = 0;
+    i = 0;
     while (salario > 0) {
         if (salario >= tabela[i].salresid) {
-            iper += tabela[i].salresid * tabela[i].incide;
+            IPER = tabela[i].salresid * tabela[i].incide;
             salario -= tabela[i].salresid;
         } else {
-            iper += salario * tabela[i].incide;
+            IPER = salario * tabela[i].incide;
             salario = 0;
         }
+        IPERs.push(IPER);
         i++;
     }
-    return iper;
+    console.log(IPERs);
+    return IPERs;
 }
 
 function displayIPER(iper) {
@@ -73,7 +77,6 @@ function displayINSS(inss) {
             currency: "BRL",
         });
 }
-
 function calcularINSS(salario) {
     let inss = 0;
     if (salario <= 1212.0) {
