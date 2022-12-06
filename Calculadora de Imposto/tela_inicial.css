@@ -1,0 +1,78 @@
+body{
+    width: auto;
+    height: auto;
+    min-width: auto;
+}
+.image-container #user{
+    float:  right;
+    position: relative;
+
+}
+.image-container #logo{
+    position: relative;
+    float: left;
+}
+.header header{
+    position: relative;
+    color:#001a33;
+    font-size: 100%;
+    text-align: center;
+}
+.header p{
+    text-align: left;
+    color:#001a33;
+    font-size: 80%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.container{
+    width: auto;
+    height: auto;
+    min-width: auto;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 50px;
+}
+.container p{
+    position: relative;
+    left:auto ;
+    color:#001a33;
+    font-size: 100%;
+    margin: auto;
+}
+.container label{
+    text-align: right;
+    font-size: medium;
+}
+.container input{
+    display: inline-block;
+    position: absolute;
+    left: 5%;
+    border-radius: 2px;
+    padding: 10px 5px;
+    font-size: medium;
+}
+.impostos{
+    position: relative;
+    right: 50px;
+    left: auto;
+    color:#001a33;
+    font-size: 100%;
+    margin: 10px 102px;
+}
+.cargos button{
+    background: #c7154a;
+    border: 1px solid #c7154a;
+    border-radius: 6px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-size: medium;
+    line-height: 16px;
+    margin: 20px 10px;
+    padding: 15px 25px;
+}
+.cargos hr{
+    margin-right: 105px;
+    margin-left: 50px;
+}
