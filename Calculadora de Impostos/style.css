@@ -11,7 +11,7 @@
 }
 
 .main{
-    padding: 20px;
+    padding: 40px;
 }
 
 p{
@@ -38,3 +38,13 @@ input{
     font-size: medium;
 }
 
+.comissionado{
+    margin-top: 25px;
+}
+
+.tabelas{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+}

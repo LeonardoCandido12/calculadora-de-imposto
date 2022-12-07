@@ -106,3 +106,7 @@ function calcularINSS(salario) {
     // return  Math.floor(inss)
     return inss;
 }
+
+
+
+

@@ -16,79 +16,176 @@
                 <img id="logo" src="https://i.ibb.co/jv4GwpG/dpe-logo.gif" alt="dpe-logo">  
             </div>
             <div class="main">
-                <label for="salario">INFORME O SALARIO DO EFETIVO:</label>
-                <input oninput="onExecutarIPER()" type="text" id="salario-iper" required placeholder="ex: R$ 5.000,00" ></input> 
-                <p id="exibir-iper"class="impostos">IPER:</p>
-                <div>
-                    <table>
-                        <tr>
-                            <th>Faixa</th>
-                            <th>Salário de</th>
-                            <th>Até</th>
-                            <th>Incidência</th>
-                            <th>IPER</th>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>-</td>
-                            <td>R$ 5.000,00</td>
-                            <td>11,00%</td>
-                            <td><span id="iper-faixa-1"></span></td>
-                        </tr>
-                        <tr>    
-                            <td>2</td>
-                            <td>R$ 5.000,01</td>
-                            <td>R$ 7.500,00</td>
-                            <td>11,50%</td>
-                            <td><span id="iper-faixa-2"></span></td>
-                        </tr>
-                        <tr>  
-                            <td>3</td>
-                            <td>R$ 7.500,01</td>
-                            <td>R$ 12.000,00</td>
-                            <td>12,00%</td>
-                            <td><span id="iper-faixa-3"></span></td>
-                        </tr>
-                        <tr> 
-                            <td>4</td>
-                            <td>R$ 12.000,01</td>
-                            <td>R$ 16.000,00</td>
-                            <td>12,50%</td>
-                            <td><span id="iper-faixa-4"></span></td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>R$ 16.000,01</td>
-                            <td>R$ 19.000,00</td>
-                            <td>13,00%</td>
-                            <td><span id="iper-faixa-5"></span></td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>R$ 19.000,01</td>
-                            <td>R$ 35.000,00</td>
-                            <td>13,50%</td>
-                            <td><span id="iper-faixa-6"></span></td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td>R$ 35.000,01</td>
-                            <td>-</td>
-                            <td>14,00%</td>
-                            <td><span id="iper-faixa-7"></span></td>
-                        </tr> 
-                    </table>
-                  </div>
-                <hr>
-                <p class="impostos">IR:</p>
-                <hr>
-                <label for="salario-inss">INFORME O SALARIO DO COMISSIONADO:</label>
-                <input oninput="onExecutarINSS()" type="text" id="salario-inss" required placeholder="ex: R$ 5.000,00" ></input>
-                <p id="exibir-inss"class="impostos">INSS:</p>
-                <hr>
-                <p class="impostos">IR:</p>
-                <hr>
-          </div> 
+                <div class="efetivo">
+                    <label for="salario">INFORME O SALARIO DO EFETIVO:</label>
+                    <input oninput="onExecutarIPER()" type="text" id="salario-iper" required placeholder="ex: R$ 5.000,00" ></input> 
+                    <p id="exibir-iper"class="impostos">IPER:</p>
+                    <hr>
+                    <p id="exibir-ir" class="impostos">IR:</p>
+                    <hr>
+                </div>
+                <div class="tabelas">
+                    <div class="tabela-iper">
+                        <table>
+                            <tr>
+                                <th>Faixa</th>
+                                <th>Salário de</th>
+                                <th>Até</th>
+                                <th>Incidência</th>
+                                <th>IPER</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>-</td>
+                                <td>R$ 5.000,00</td>
+                                <td>11,00%</td>
+                                <td><span id="iper-faixa-1"></span></td>
+                            </tr>
+                            <tr>    
+                                <td>2</td>
+                                <td>R$ 5.000,01</td>
+                                <td>R$ 7.500,00</td>
+                                <td>11,50%</td>
+                                <td><span id="iper-faixa-2"></span></td>
+                            </tr>
+                            <tr>  
+                                <td>3</td>
+                                <td>R$ 7.500,01</td>
+                                <td>R$ 12.000,00</td>
+                                <td>12,00%</td>
+                                <td><span id="iper-faixa-3"></span></td>
+                            </tr>
+                            <tr> 
+                                <td>4</td>
+                                <td>R$ 12.000,01</td>
+                                <td>R$ 16.000,00</td>
+                                <td>12,50%</td>
+                                <td><span id="iper-faixa-4"></span></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>R$ 16.000,01</td>
+                                <td>R$ 19.000,00</td>
+                                <td>13,00%</td>
+                                <td><span id="iper-faixa-5"></span></td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>R$ 19.000,01</td>
+                                <td>R$ 35.000,00</td>
+                                <td>13,50%</td>
+                                <td><span id="iper-faixa-6"></span></td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>R$ 35.000,01</td>
+                                <td>-</td>
+                                <td>14,00%</td>
+                                <td><span id="iper-faixa-7"></span></td>
+                            </tr> 
+                        </table>
+                    </div>
+                    <div class="tabela-inss">
+                        <table>
+                            <tr>
+                                <th>Faixa</th>
+                                <th>Salário de</th>
+                                <th>Até</th>
+                                <th>Alíquota</th>
+                                <th>INSS</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>-</td>
+                                <td>R$ 1.212,00</td>
+                                <td>7,5%</td>
+                                <td><span id="inss-faixa-1"></span></td>
+                            </tr>
+                            <tr>    
+                                <td>2</td>
+                                <td>R$ 1.212,01</td>
+                                <td>R$ 2.427,35</td>
+                                <td>9,00%</td>
+                                <td><span id="inss-faixa-2"></span></td>
+                            </tr>
+                            <tr>  
+                                <td>3</td>
+                                <td>R$ 2.427,36</td>
+                                <td>R$ 3.641,03</td>
+                                <td>12,00%</td>
+                                <td><span id="inss-faixa-3"></span></td>
+                            </tr>
+                            <tr> 
+                                <td>4</td>
+                                <td>R$ 3.641,04</td>
+                                <td>R$ 7.087,22</td>
+                                <td>14,00%</td>
+                                <td><span id="inss-faixa-4"></span></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>R$ 7.087,22</td>
+                                <td>-</td>
+                                <td>13,00%</td>
+                                <td><span id="inss-faixa-5"></span></td>
+                            </tr> 
+                        </table>
+                    </div>
+                    <div class="tabela-ir">
+                        <table>
+                            <tr>
+                                <th>Faixa</th>
+                                <th>Salário de</th>
+                                <th>Até</th>
+                                <th>IR</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>-</td>
+                                <td>R$ 1.903,98</td>
+                                <td>Isento</td>
+                                <td><span id="ir-faixa-1"></span></td>
+                            </tr>
+                            <tr>    
+                                <td>2</td>
+                                <td>R$ 1.903,99</td>
+                                <td>R$ 2.826,65</td>
+                                <td>7,50%</td>
+                                <td><span id="ir-faixa-2"></span></td>
+                            </tr>
+                            <tr>  
+                                <td>3</td>
+                                <td>R$ 2.826,66</td>
+                                <td>R$ 3.751,05</td>
+                                <td>15,00%</td>
+                                <td><span id="ir-faixa-3"></span></td>
+                            </tr>
+                            <tr> 
+                                <td>4</td>
+                                <td>R$ 3.751,06</td>
+                                <td>R$ 4.664,68</td>
+                                <td>22,50%</td>
+                                <td><span id="ir-faixa-4"></span></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>R$ 4.664,68</td>
+                                <td>-</td>
+                                <td>27,50%</td>
+                                <td><span id="ir-faixa-5"></span></td>
+                            </tr> 
+                        </table>
+                    </div>
+                </div>  
+                <div class="comissionado">
+                    <label for="salario-inss">INFORME O SALARIO DO COMISSIONADO:</label>
+                    <input oninput="onExecutarINSS()" type="text" id="salario-inss" required placeholder="ex: R$ 5.000,00" ></input>
+                    <p id="exibir-inss"class="impostos">INSS:</p>
+                    <hr>
+                    <p id="exibir-ir" class="impostos">IR:</p>
+                    <hr>
+                </div> 
+            </div> 
         </div>
     </body>
 </html>
