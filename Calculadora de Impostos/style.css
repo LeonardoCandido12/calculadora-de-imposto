@@ -3,11 +3,12 @@
     font-family: 'Times New Roman', Times, serif;
 }
 
-.header{
-    display: grid;
-    text-align: center;
-    align-content: center;
-    justify-content: center;
+.header{ 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
 }
 
 .main{
@@ -18,18 +19,7 @@ p{
     font-size: 1.25rem;
 }
 
-#avatar{
-    position: fixed;
-    right: 2%;
-    top: 10px;
-    cursor: pointer;
-}
 
-#logo{
-    position: fixed;
-    left: 2%;
-    cursor: pointer;
-}
 
 input{
     display: block;
