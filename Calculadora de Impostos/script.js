@@ -7,12 +7,14 @@ const tabela = [
     { salinicio: 19000.1, salfim: 35000, salresid: 16000, incide: 0.135 },
     { salinicio: 35000, salfim: 100000000, salresid: 965000000, incide: 0.14 },
 ];
-const iperHTML = document.getElementById("salario-iper");
-const inssHTML = document.getElementById("salario-inss");
+const efetivoHTML = document.getElementById("salario-efetivo");
+const comissHTML = document.getElementById("salario-comiss");
 const exibirIPER = document.getElementById("exibir-iper");
-
+const exibirINSS = document.getElementById("exibir-inss");
+const exibirIrEfetivo = document.getElementById('exibir-ir-efetivo')
+const exibirIrComiss = document.getElementById('exibir-ir-comiss')
 const idsIPER = getIdsIPER();
-
+const numDep = 0
 function getIdsIPER() {
     const ids = [];
     const base = "iper-faixa-";
@@ -24,15 +26,17 @@ function getIdsIPER() {
     return ids;
 }
 
-function onExecutarIPER() {
-    const valorIPER = iperHTML.value.replace(",", ".");
-    const IPERs = calcularIPER(valorIPER);
+function onExecutarEfetivo() {
+    const valorEfetivo = efetivoHTML.value.replace(",", ".");
+    const IPERs = calcularIPER(valorEfetivo);
 
     let IPER = 0;
     try {
         IPER = IPERs.reduce((a, b) => a + b);
     } catch (error) {}
-    displayIPER(IPER, IPERs);
+    const IRRF = calcularIRPF(valorEfetivo,IPER,numDep)
+    displayEfetivo(IPER, IPERs, IRRF);
+   
 }
 
 function calcularIPER(salario) {
@@ -54,7 +58,7 @@ function calcularIPER(salario) {
     return IPERs;
 }
 
-function displayIPER(IPER, IPERs) {
+function displayEfetivo(IPER, IPERs, IRRF) {
     exibirIPER.innerText =
         "IPER: " +
         IPER.toLocaleString("pt-br", {
@@ -72,16 +76,20 @@ function displayIPER(IPER, IPERs) {
             idsIPER[i].innerText = "";
         }
     }
+    exibirIrEfetivo.innerText = "IR: "+IRRF.toLocaleString("pt-br", {
+        style: "currency",
+        currency: "BRL",
+    })
 }
 
-function onExecutarINSS() {
-    const valorINSS = inssHTML.value;
-    const INSS = calcularINSS(valorINSS);
-    displayINSS(INSS);
+function onExecutarComiss() {
+    const valorComiss = comissHTML.value;
+    const INSS = calcularINSS(valorComiss);
+    const IRRF = calcularIRPF(valorComiss,INSS,numDep)
+    displayComiss(INSS, IRRF);
 }
 
-function displayINSS(inss) {
-    const exibirINSS = document.getElementById("exibir-inss");
+function displayComiss(inss,IRRF) {
     console.log(inss);
     exibirINSS.innerText =
         "INSS: " +
@@ -89,6 +97,12 @@ function displayINSS(inss) {
             style: "currency",
             currency: "BRL",
         });
+    exibirIrComiss.innerText = 
+        "IR: " +
+        IRRF.toLocaleString("pt-br", {
+            style: "currency",
+            currency: "BRL",
+    });
 }
 function calcularINSS(salario) {
     let inss = 0;
@@ -103,10 +117,26 @@ function calcularINSS(salario) {
     } else {
         inss = 828.38;
     }
-    // return  Math.floor(inss)
     return inss;
 }
 
+function calcularIRPF(salario, previdencia, numDep){
+    let irrf = 0;
+    let valorMensal = (salario - previdencia) - (numDep * 189.59);
+
+    if(valorMensal > 0.01 && valorMensal <= 1903){
+        irrf = (valorMensal * 0.000)
+    } else if (valorMensal > 1903.99 && valorMensal <= 2826.65){
+        irrf = (valorMensal * 0.075)-142.80
+    } else if(valorMensal > 2826.66 && valorMensal <= 3751.05){
+        irrf = (valorMensal * 0.150)-354.80
+    } else if(valorMensal > 3751.06 && valorMensal <= 4664.68) {
+        irrf = (valorMensal * 0.225)-636.13
+    } else{
+        irrf = (valorMensal*0.275)-869.36
+    }
+        return irrf
+}
 
 
 
