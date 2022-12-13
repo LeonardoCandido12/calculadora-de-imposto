@@ -24,8 +24,8 @@
                     <p id="exibir-ir-efetivo" class="impostos">IR:</p>
                     <hr>
                 </div>
-                <div class="tabelas">
-                    <div class="tabela-iper">
+                <div class="tabelas-efetivo">
+                    <div id="tabela-iper">
                         <table>
                             <tr>
                                 <th>Faixa</th>
@@ -85,7 +85,62 @@
                             </tr> 
                         </table>
                     </div>
-                    <div class="tabela-inss">
+                    <div class="tabela-ir">
+                        <table>
+                            <tr>
+                                <th>Faixa</th>
+                                <th>Salário de</th>
+                                <th>Até</th>
+                                <th>IR</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>-</td>
+                                <td>R$ 1.903,98</td>
+                                <td>Isento</td>
+                                <td><span id="ir-faixa-1"></span></td>
+                            </tr>
+                            <tr>    
+                                <td>2</td>
+                                <td>R$ 1.903,99</td>
+                                <td>R$ 2.826,65</td>
+                                <td>7,50%</td>
+                                <td><span id="ir-faixa-2"></span></td>
+                            </tr>
+                            <tr>  
+                                <td>3</td>
+                                <td>R$ 2.826,66</td>
+                                <td>R$ 3.751,05</td>
+                                <td>15,00%</td>
+                                <td><span id="ir-faixa-3"></span></td>
+                            </tr>
+                            <tr> 
+                                <td>4</td>
+                                <td>R$ 3.751,06</td>
+                                <td>R$ 4.664,68</td>
+                                <td>22,50%</td>
+                                <td><span id="ir-faixa-4"></span></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>R$ 4.664,68</td>
+                                <td>-</td>
+                                <td>27,50%</td>
+                                <td><span id="ir-faixa-5"></span></td>
+                            </tr> 
+                        </table>
+                    </div>
+                </div>  
+                <div class="comissionado">
+                    <label for="salario-inss">INFORME O SALARIO DO COMISSIONADO:</label>
+                    <input oninput="onExecutarComiss()" type="text" id="salario-comiss" required placeholder="ex: R$ 5.000,00" ></input>
+                    <p id="exibir-inss"class="impostos">INSS:</p>
+                    <hr>
+                    <p id="exibir-ir-comiss" class="impostos">IR:</p>
+                    <hr>
+                </div> 
+                <div class="tabelas-comissionado">
+                    <div id="tabela-inss">
                         <table>
                             <tr>
                                 <th>Faixa</th>
@@ -176,15 +231,7 @@
                             </tr> 
                         </table>
                     </div>
-                </div>  
-                <div class="comissionado">
-                    <label for="salario-inss">INFORME O SALARIO DO COMISSIONADO:</label>
-                    <input oninput="onExecutarComiss()" type="text" id="salario-comiss" required placeholder="ex: R$ 5.000,00" ></input>
-                    <p id="exibir-inss"class="impostos">INSS:</p>
-                    <hr>
-                    <p id="exibir-ir-comiss" class="impostos">IR:</p>
-                    <hr>
-                </div> 
+                </div>
             </div> 
         </div>
     </body>
