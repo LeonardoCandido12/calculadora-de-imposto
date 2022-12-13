@@ -1,4 +1,5 @@
-.container{
+body{
+    margin: 10px;
     color:#001a33;
     font-family: 'Times New Roman', Times, serif;
 }
@@ -8,7 +9,25 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 10px;
 
+}
+
+#logo{
+    width: auto;
+    height: auto;
+    margin-right: 25px;
+}
+
+#avatar{
+    width: auto;
+    height: auto;
+    margin-left: 25px;
+}
+
+h2{
+    font-size: 1.4rem;
+    text-align: center;
 }
 
 .main{
@@ -30,12 +49,16 @@ input{
     margin-top: 25px;
 }
 
-.tabelas{
+.tabelas-efetivo{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-content: flex-start;
-    justify-content: space-between;
     align-items: baseline;
-    margin-top: 30px;
+}
+
+.tabelas-comissionado{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
 }
