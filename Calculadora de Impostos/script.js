@@ -132,7 +132,7 @@ function calcularIRPF(salario, previdencia, numDep){
         irrf = (valorMensal * 0.150)-354.80
     } else if(valorMensal > 3751.06 && valorMensal <= 4664.68) {
         irrf = (valorMensal * 0.225)-636.13
-    } else{
+    } else if(valorMensal > 4664.68){
         irrf = (valorMensal*0.275)-869.36
     }
         return irrf
