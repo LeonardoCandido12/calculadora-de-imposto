@@ -1,33 +1,34 @@
 body{
-    margin: 10px;
+    font-size: 1.25rem;
     color:#001a33;
     font-family: 'Times New Roman', Times, serif;
+    margin: 0px;
+    padding: 0px;
 }
+
 
 .header{ 
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-    padding: 10px;
-
-}
-
-#logo{
-    width: auto;
-    height: auto;
-    margin-right: 25px;
-}
-
-#avatar{
-    width: auto;
-    height: auto;
-    margin-left: 25px;
+    justify-content: space-between;
+    background-color: rgb(73, 124, 73);
+    border: 4px solid;
+    border-color: rgb(98, 134, 44);
 }
 
 h2{
-    font-size: 1.4rem;
-    text-align: center;
+    font-size: 1.5rem;
+}
+
+#logo{
+    margin-right: 25px;
+    cursor: pointer;
+}
+
+#avatar{
+    margin-left: 25px;
+    cursor: pointer;
 }
 
 .main{
@@ -36,6 +37,10 @@ h2{
 
 p{
     font-size: 1.25rem;
+}
+
+label{
+    font-size: 1.125rem;
 }
 
 input{
@@ -49,16 +54,52 @@ input{
     margin-top: 25px;
 }
 
-.tabelas-efetivo{
+.tabelas-efetivo, .tabelas-comissionado{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: baseline;
+    row-gap: 15px;
+    column-gap: 30px
 }
 
-.tabelas-comissionado{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: baseline;
+table {
+    border-spacing: 1px;
+}
+
+td {
+    padding: 6px;
+}
+
+
+@media (max-width: 600px){ 
+    body{
+        margin: 0px;
+        padding: 0px;
+        font-size: 1rem;
+    }
+    h2{
+        font-size: 1.25rem;
+        text-align: center;
+    }
+    input{
+        display: block;
+        border-radius: 1px;
+        padding: 8px 3px;
+        font-size: 0.875rem;
+    }
+    p{
+        font-size: 1rem;
+    }
+    label{
+        font-size: 0.9rem;
+    }
+    table{
+        width: 100%;
+        height: 100%;
+    }
+    #logo, #avatar{
+        width: 13%;
+        height: 13%;
+    }
 }
