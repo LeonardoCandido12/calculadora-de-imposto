@@ -65,6 +65,7 @@ function displayEfetivo(IPER, IPERs, IRRF) {
         IPER.toLocaleString("pt-br", {
             style: "currency",
             currency: "BRL",
+            maximumFractionDigits:4,
         });
 
     for (let i = 0; i < idsIPER.length; i++) {
@@ -72,6 +73,7 @@ function displayEfetivo(IPER, IPERs, IRRF) {
             idsIPER[i].innerText = IPERs[i].toLocaleString("pt-br", {
                 style: "currency",
                 currency: "BRL",
+                maximumFractionDigits:4,
             });
         } catch (error) {
             idsIPER[i].innerText = "";
@@ -98,12 +100,14 @@ function displayComiss(inss,IRRF) {
         inss.toLocaleString("pt-br", {
             style: "currency",
             currency: "BRL",
+            maximumFractionDigits: 4,
         });
     exibirIrComiss.innerText = 
         "IR: " +
         IRRF.toLocaleString("pt-br", {
             style: "currency",
             currency: "BRL",
+            maximumFractionDigits: 4,
     });
 }
 function calcularINSS(salario) {
