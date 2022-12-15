@@ -6,14 +6,15 @@ body{
     padding: 0px;
 }
 
-
 .header{ 
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     background-color: rgb(73, 124, 73);
-    border: 4px solid;
+    height: 50px;
+    border: 2px solid;
+    border-top: 0px;
     border-color: rgb(98, 134, 44);
 }
 
@@ -59,11 +60,12 @@ input{
     flex-direction: row;
     flex-wrap: wrap;
     align-items: baseline;
-    row-gap: 15px;
-    column-gap: 30px
+    row-gap: 40px;
+    column-gap: 40px
 }
 
 table {
+    border: 2px solid #000000;
     border-spacing: 1px;
 }
 
@@ -73,10 +75,16 @@ td {
 
 
 @media (max-width: 600px){ 
+    html{
+        width: fit-content;
+    }
     body{
         margin: 0px;
         padding: 0px;
         font-size: 1rem;
+    }
+    .header{
+        height: 35px;
     }
     h2{
         font-size: 1.25rem;
@@ -95,11 +103,9 @@ td {
         font-size: 0.9rem;
     }
     table{
-        width: 100%;
-        height: 100%;
+        width: max-content;
     }
     #logo, #avatar{
-        width: 13%;
-        height: 13%;
+        width: 30px;
     }
 }
