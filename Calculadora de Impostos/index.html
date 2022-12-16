@@ -11,11 +11,11 @@
     <body>
         <div class="header">
             <img id="logo" src="https://i.ibb.co/1zr0T8J/dpe-logo-1.gif" alt="dpe-logo">
-            <h2>Calculadora de Impostos</h2>
-            <img id="avatar" src="https://i.ibb.co/whF7Dxp/User-icon-cp-svg-1-1.png" alt="avatar-icon">
+            <h1>Calculadora de Impostos</h1>
         </div>
         <div class="main">
             <div class="efetivo">
+                <h3>Cálculo para servidor efetivo</h3>
                 <label for="salario">INFORME O SALÁRIO DO EFETIVO:</label>
                 <br><br>
                 <input oninput="onExecutarEfetivo()" type="number" id="salario-efetivo" required placeholder="ex: R$ 5.000,00" ></input> 
@@ -136,6 +136,7 @@
             </div>  
             <hr>
             <div class="comissionado">
+                <h3>Cálculo para servidor comissionado</h3>
                 <label for="salario-inss">INFORME O SALARIO DO COMISSIONADO:</label>
                 <br><br>
                 <input oninput="onExecutarComiss()" type="number" id="salario-comiss" required placeholder="ex: R$ 5.000,00" ></input>
