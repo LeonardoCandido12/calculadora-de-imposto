@@ -52,7 +52,11 @@ input{
 }
 
 .comissionado{
-    margin-top: 25px;
+    margin-top: 20px;
+}
+
+hr{
+    border: 3px solid;
 }
 
 .tabelas-efetivo, .tabelas-comissionado{
@@ -107,5 +111,8 @@ td {
     }
     #logo, #avatar{
         width: 30px;
+    }
+    hr{
+    border:1px solid;
     }
 }
