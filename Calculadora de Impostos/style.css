@@ -75,10 +75,6 @@ td {
     padding: 5px;
 }
 
-tr{
-    background: linear-gradient(27deg, #204a14fa, #74c949 100px);
-}
-
 @media (max-width: 600px){ 
     html{
         width: fit-content;
